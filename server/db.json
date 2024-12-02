@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Иванов Иван Иванович",
+      "email": "i.ivanov@doc.ru",
+      "password": "ivanov1"
+    },
+    {
+      "id": "2",
+      "name": "Петров Петр Петрович",
+      "email": "p.petrov@doc.ru",
+      "password": "petrov2"
+    },
+    {
+      "id": "3",
+      "name": "Сидоров Сидор Сидорович",
+      "email": "s.sidorov@doc.ru",
+      "password": "sidorov3"
+    }
+  ],
+  "applications": [
+    {
+      "id": "1",
+      "userId": "1",
+      "documentName": "ГОСТ 123"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "documentName": "ГОСТ Р 125"
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "documentName": "ГОСТ РВ 0009"
+    },
+    {
+      "id": "4",
+      "userId": "2",
+      "documentName": "ГОСТ РВ 0001"
+    },
+    {
+      "id": "5",
+      "userId": "2",
+      "documentName": "ГОСТ 123"
+    },
+    {
+      "id": "6",
+      "userId": "3",
+      "documentName": "ГОСТ РВ 0002"
+    },
+    {
+      "id": "7",
+      "userId": "3",
+      "documentName": "ГОСТ Р 125"
+    },
+    {
+      "id": "8",
+      "userId": "1",
+      "documentName": "ГОСТ РВ 0001"
+    },
+    {
+      "id": "9",
+      "userId": "2",
+      "documentName": "ГОСТ Р 125"
+    }
+  ]
+}

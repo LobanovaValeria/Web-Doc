@@ -1,0 +1,21 @@
+.formInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.titleForm {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 20px;
+}
+.btn_submit {
+  margin: 20px 20px;
+}

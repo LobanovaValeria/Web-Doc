@@ -1,0 +1,23 @@
+.wrapper_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form {
+  width: 300px;
+  padding: 40px 30px;
+  border-radius: 30px;
+  border: 1px solid #1976d2;
+  color: #1976d2;
+}
+.form_wrapper-btn {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.form_signUp {
+  color: #1976d2;
+}
