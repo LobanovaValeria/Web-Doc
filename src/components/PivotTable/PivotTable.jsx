@@ -28,10 +28,17 @@ export default function PivotTable() {
   };
 
   const fetchSumCount = async () => {
-    const applicationData = await getDocuments();
-    const arrSort = sumAppAddNumber(applicationData);
-    arrSort.sort((a, b) => b.count - a.count);
-    setSumCount(arrSort);
+    try {
+      const applicationData = await getDocuments();
+      const notNulapplicationData=Array.isArray(applicationData) ? applicationData : [];
+      const arrSort = sumAppAddNumber(notNulapplicationData);
+      arrSort.sort((a, b) => b.count - a.count);
+      setSumCount(arrSort);
+    } catch (error) {
+      console.log(error);
+      setSumCount([]);
+    }
+    
   };
   useEffect(() => {
     fetchSumCount();

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import axios from 'axios';
 import { useTheme, AppBar, Tabs, Tab, Typography, Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
@@ -7,6 +6,7 @@ import { useState, useEffect } from 'react';
 import FormApp from '../../components/formApp/FormApp';
 import PivotTable from '../../components/PivotTable/PivotTable';
 import { resources } from '../../resources/resources';
+import { getUsers } from '../../services/api/apiUsers'; 
 import './appDoc.css';
 
 function TabPanel(props) {
@@ -44,13 +44,13 @@ function a11yProps(index) {
 
 export default function AppDoc() {
   const [users, setUsers] = useState([]);
-  const [applications, setApplications] = useState([]);
+ 
   useEffect(() => {
     const fetchUsers = async () => {
-      const resUsers = await axios.get('http://localhost:3001/users');
-      const resApp = await axios.get('http://localhost:3001/users');
-      setUsers(resUsers.data);
-      setApplications(resApp.data);
+      const resUsers = await getUsers();
+      
+      setUsers(resUsers);
+      
     };
     fetchUsers();
   }, []);
@@ -80,7 +80,7 @@ export default function AppDoc() {
 
       <TabPanel value={value} index={0} dir={theme.direction}>
         <div className="TabPanel">
-          <FormApp users={users} applications={applications} />
+          <FormApp users={users} />
         </div>
       </TabPanel>
 

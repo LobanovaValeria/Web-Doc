@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const getDocuments = async () => {
   try {
-    const resApp = await axios.get('http://localhost:3001/applications');
+    const resApp = await axios.get('https://simpleback-gwyn.onrender.com/applications');
     return resApp.data;
   } catch (error) {
     console.log(error);
@@ -11,7 +11,7 @@ export const getDocuments = async () => {
 
 export const postDocuments = async (id, docName) => {
   try {
-    await axios.post('http://localhost:3001/applications', {
+    await axios.post('https://simpleback-gwyn.onrender.com/applications', {
       userId: id,
       documentName: docName.trim(),
     });
